@@ -1,0 +1,1426 @@
+{
+  "facility": {
+    "name": "Sunrise Assisted Living",
+    "as_of": "2026-06-01T08:00:00"
+  },
+  "patients": [
+    {
+      "id": "p-204",
+      "name": "Margaret Thompson",
+      "room": "204",
+      "age": 81,
+      "sex": "F",
+      "admission_date": "2024-01-14",
+      "dob": "1944-08-12",
+      "primary_concern": "Progressive Alzheimer's with a new month-long drop in appetite and 8-lb weight loss; rule out depression vs. medication effect.",
+      "risk_flags": [
+        "Weight loss",
+        "Poor oral intake",
+        "Depression risk"
+      ],
+      "care_team": {
+        "attending": "Dr. Anita Rao, MD — Geriatrics",
+        "primary_nurse": "RN Priya Patel",
+        "specialists": [
+          "Dr. Lillian Cho — Neurology"
+        ]
+      },
+      "medical_history": [
+        {
+          "year": 2021,
+          "event": "Alzheimer's disease diagnosed (mild)"
+        },
+        {
+          "year": 2015,
+          "event": "Hypertension, managed on lisinopril"
+        },
+        {
+          "year": 2009,
+          "event": "Right total knee replacement"
+        },
+        {
+          "year": 1998,
+          "event": "Cholecystectomy (gallbladder removal)"
+        }
+      ],
+      "labs": [
+        {
+          "date": "2026-05-22",
+          "panel": "Metabolic + nutrition",
+          "results": [
+            {
+              "name": "Albumin",
+              "value": "3.2",
+              "unit": "g/dL",
+              "flag": "low"
+            },
+            {
+              "name": "Sodium",
+              "value": "138",
+              "unit": "mmol/L",
+              "flag": "normal"
+            },
+            {
+              "name": "Glucose",
+              "value": "96",
+              "unit": "mg/dL",
+              "flag": "normal"
+            },
+            {
+              "name": "TSH",
+              "value": "2.1",
+              "unit": "mIU/L",
+              "flag": "normal"
+            }
+          ]
+        },
+        {
+          "date": "2026-02-10",
+          "panel": "Vitamin panel",
+          "results": [
+            {
+              "name": "Vitamin B12",
+              "value": "410",
+              "unit": "pg/mL",
+              "flag": "normal"
+            },
+            {
+              "name": "Vitamin D",
+              "value": "24",
+              "unit": "ng/mL",
+              "flag": "low"
+            }
+          ]
+        }
+      ],
+      "specialist_comms": [
+        {
+          "date": "2026-05-15",
+          "from": "Dr. Lillian Cho — Neurology",
+          "text": "6-month dementia follow-up. MoCA 18/30, down 2 points. No change to donepezil advised; consider mood evaluation given reduced intake."
+        },
+        {
+          "date": "2026-03-02",
+          "from": "Dr. Anita Rao — Geriatrics",
+          "text": "Annual wellness visit. Encouraged high-protein supplementation and fall precautions."
+        }
+      ],
+      "admission_note": {
+        "date": "2024-01-14",
+        "author": "Dr. Anita Rao, MD — Geriatrics",
+        "text": "Admitted from home following caregiver burnout and progressive memory decline. Alert, oriented to person and place. Independent with most ADLs at baseline. Plan: establish care, continue donepezil and lisinopril, monitor cognition and safety."
+      },
+      "doctor_notes": [
+        {
+          "date": "2026-04-18",
+          "author": "Dr. Anita Rao, MD — Geriatrics",
+          "text": "Routine review. Cognition stable since last visit; appetite adequate at the time. BP well controlled. Continue current regimen."
+        },
+        {
+          "date": "2025-10-09",
+          "author": "Dr. Anita Rao, MD — Geriatrics",
+          "text": "Six-month review. Mild decline in short-term recall. Reinforced structured routine and orientation cues with staff. No medication change."
+        }
+      ],
+      "diagnoses": [
+        "Alzheimer's disease",
+        "Hypertension"
+      ],
+      "medications": [
+        {
+          "name": "Donepezil",
+          "dose": "10 mg nightly"
+        },
+        {
+          "name": "Lisinopril",
+          "dose": "20 mg daily"
+        }
+      ],
+      "status": "attention",
+      "trends": {
+        "eating": "declining",
+        "social": "improving",
+        "activity": "stable"
+      },
+      "summary": "Eating declined three weeks running; possible early depressive episode.",
+      "vitals": [
+        {
+          "date": "2026-05-04",
+          "weight": 142,
+          "bp": "128/78",
+          "hr": 72
+        },
+        {
+          "date": "2026-05-11",
+          "weight": 140,
+          "bp": "126/76",
+          "hr": 74
+        },
+        {
+          "date": "2026-05-18",
+          "weight": 137,
+          "bp": "130/80",
+          "hr": 75
+        },
+        {
+          "date": "2026-05-25",
+          "weight": 134,
+          "bp": "132/82",
+          "hr": 77
+        }
+      ],
+      "adl": [
+        {
+          "date": "2026-05-04",
+          "eating": 4,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 3,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-11",
+          "eating": 3,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 3,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-18",
+          "eating": 3,
+          "mobility": 3,
+          "bathing": 2,
+          "dressing": 3,
+          "toileting": 3
+        },
+        {
+          "date": "2026-05-25",
+          "eating": 2,
+          "mobility": 3,
+          "bathing": 2,
+          "dressing": 3,
+          "toileting": 3
+        }
+      ],
+      "notes": [
+        {
+          "date": "2026-05-26 18:20",
+          "author": "CNA Ramirez",
+          "text": "Left most of dinner again. Said she 'wasn't hungry.' Encouraged a protein shake, took a few sips."
+        },
+        {
+          "date": "2026-05-24 12:05",
+          "author": "RN Patel",
+          "text": "Joined the music hour and sang along, brighter affect than last week. Still picking at meals."
+        },
+        {
+          "date": "2026-05-20 19:40",
+          "author": "CNA Ramirez",
+          "text": "Third day this week leaving over half her tray. Weight trending down on weekly check."
+        },
+        {
+          "date": "2026-05-15 09:15",
+          "author": "RN Patel",
+          "text": "Pleasant, oriented to person. Appetite noted as reduced; will monitor intake."
+        }
+      ],
+      "analysis": {
+        "confidence": "moderate",
+        "conclusion": "Margaret's steady decline in eating over the past month, alongside weight loss (142 to 134 lb), is consistent with a possible early depressive episode rather than a purely medical cause. Encouragingly, her social engagement has improved, which is a positive counter-signal. Recommend a mood screen and a review of meal timing and preferences before considering medication changes.",
+        "areas": [
+          "behavioral",
+          "treatment"
+        ],
+        "research": [
+          {
+            "source": "PubMed",
+            "title": "Appetite loss as an early marker of depression in dementia",
+            "ref": "PMID 38421190"
+          },
+          {
+            "source": "PubMed",
+            "title": "Non-pharmacologic interventions for reduced oral intake in elderly care",
+            "ref": "PMID 37990221"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p-118",
+      "name": "Robert Klein",
+      "room": "118",
+      "age": 78,
+      "sex": "M",
+      "admission_date": "2023-09-02",
+      "dob": "1947-11-03",
+      "primary_concern": "Parkinson's with worsening gait instability and new transfer difficulty; high fall risk. CHF needs close fluid-status monitoring.",
+      "risk_flags": [
+        "Falls",
+        "Gait instability",
+        "Fluid overload (CHF)"
+      ],
+      "care_team": {
+        "attending": "Dr. Marcus Hill, MD — Internal Medicine",
+        "primary_nurse": "RN David Osei",
+        "specialists": [
+          "Dr. Sofia Vargas — Cardiology",
+          "Dr. Lillian Cho — Neurology"
+        ]
+      },
+      "medical_history": [
+        {
+          "year": 2018,
+          "event": "Parkinson's disease diagnosed"
+        },
+        {
+          "year": 2016,
+          "event": "Congestive heart failure (EF 40%)"
+        },
+        {
+          "year": 2012,
+          "event": "Myocardial infarction, LAD stent placed"
+        },
+        {
+          "year": 2004,
+          "event": "Appendectomy"
+        }
+      ],
+      "labs": [
+        {
+          "date": "2026-05-21",
+          "panel": "Heart-failure panel",
+          "results": [
+            {
+              "name": "BNP",
+              "value": "620",
+              "unit": "pg/mL",
+              "flag": "high"
+            },
+            {
+              "name": "Creatinine",
+              "value": "1.4",
+              "unit": "mg/dL",
+              "flag": "high"
+            },
+            {
+              "name": "Potassium",
+              "value": "4.6",
+              "unit": "mmol/L",
+              "flag": "normal"
+            }
+          ]
+        },
+        {
+          "date": "2026-04-12",
+          "panel": "CBC",
+          "results": [
+            {
+              "name": "Hemoglobin",
+              "value": "12.1",
+              "unit": "g/dL",
+              "flag": "low"
+            },
+            {
+              "name": "WBC",
+              "value": "7.0",
+              "unit": "K/uL",
+              "flag": "normal"
+            }
+          ]
+        }
+      ],
+      "specialist_comms": [
+        {
+          "date": "2026-05-19",
+          "from": "Dr. Sofia Vargas — Cardiology",
+          "text": "Reviewed rising BNP and ankle edema. Increase furosemide to 60 mg daily for 5 days, daily weights, recheck in one week. Watch for orthostasis given Parkinson's."
+        },
+        {
+          "date": "2026-04-28",
+          "from": "Dr. Lillian Cho — Neurology",
+          "text": "Motor fluctuations noted. Adjusted carbidopa-levodopa timing; PT referral for gait and transfer safety."
+        }
+      ],
+      "admission_note": {
+        "date": "2023-09-02",
+        "author": "Dr. Marcus Hill, MD — Internal Medicine",
+        "text": "Admitted after recurrent falls at home and difficulty managing heart-failure medications. Moderate bradykinesia and gait instability noted. Plan: medication supervision, fall precautions, cardiology and neurology follow-up, daily weights."
+      },
+      "doctor_notes": [
+        {
+          "date": "2026-03-30",
+          "author": "Dr. Marcus Hill, MD — Internal Medicine",
+          "text": "Quarterly review. Parkinson's motor symptoms progressing; transfers require increasing assistance. CHF stable at the time. Coordinating with cardiology and neurology."
+        },
+        {
+          "date": "2025-09-15",
+          "author": "Dr. Marcus Hill, MD — Internal Medicine",
+          "text": "Stable. Mild ankle edema, lungs clear. Continue furosemide; reinforced low-sodium diet with staff."
+        }
+      ],
+      "diagnoses": [
+        "Parkinson's disease",
+        "Congestive heart failure"
+      ],
+      "medications": [
+        {
+          "name": "Carbidopa-levodopa",
+          "dose": "25/100 mg TID"
+        },
+        {
+          "name": "Furosemide",
+          "dose": "40 mg daily"
+        }
+      ],
+      "status": "attention",
+      "trends": {
+        "eating": "stable",
+        "social": "declining",
+        "activity": "declining"
+      },
+      "summary": "Activity sharply reduced over the last 5 days; new unsteadiness on transfers.",
+      "vitals": [
+        {
+          "date": "2026-05-04",
+          "weight": 178,
+          "bp": "118/70",
+          "hr": 68
+        },
+        {
+          "date": "2026-05-11",
+          "weight": 179,
+          "bp": "116/72",
+          "hr": 70
+        },
+        {
+          "date": "2026-05-18",
+          "weight": 181,
+          "bp": "122/74",
+          "hr": 73
+        },
+        {
+          "date": "2026-05-25",
+          "weight": 184,
+          "bp": "124/78",
+          "hr": 76
+        }
+      ],
+      "adl": [
+        {
+          "date": "2026-05-04",
+          "eating": 4,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 3,
+          "toileting": 3
+        },
+        {
+          "date": "2026-05-11",
+          "eating": 4,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 2,
+          "toileting": 3
+        },
+        {
+          "date": "2026-05-18",
+          "eating": 4,
+          "mobility": 2,
+          "bathing": 2,
+          "dressing": 2,
+          "toileting": 2
+        },
+        {
+          "date": "2026-05-25",
+          "eating": 4,
+          "mobility": 1,
+          "bathing": 2,
+          "dressing": 2,
+          "toileting": 2
+        }
+      ],
+      "notes": [
+        {
+          "date": "2026-05-27 07:50",
+          "author": "PT Nguyen",
+          "text": "Declined morning walk, reports legs 'too heavy.' Ankle swelling noted bilaterally."
+        },
+        {
+          "date": "2026-05-25 21:10",
+          "author": "CNA Brooks",
+          "text": "Required two-person assist for transfer tonight; was a one-person assist last week."
+        },
+        {
+          "date": "2026-05-22 14:30",
+          "author": "RN Doyle",
+          "text": "Weight up 6 lb over three weeks. Mild SOB on exertion. Notified on-call provider."
+        }
+      ],
+      "analysis": {
+        "confidence": "high",
+        "conclusion": "Robert's rapid drop in mobility and activity, paired with steady weight gain (178 to 184 lb), bilateral ankle swelling, and exertional shortness of breath, points toward a likely CHF exacerbation rather than Parkinson's progression alone. This warrants prompt clinical review of his fluid status and diuretic dosing.",
+        "areas": [
+          "behavioral",
+          "drug_safety",
+          "treatment"
+        ],
+        "research": [
+          {
+            "source": "OpenFDA",
+            "title": "Furosemide — adverse event signals (electrolyte imbalance, dehydration)",
+            "ref": "FAERS"
+          },
+          {
+            "source": "PubMed",
+            "title": "Early detection of CHF decompensation via daily weight monitoring",
+            "ref": "PMID 38110457"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p-312",
+      "name": "Helen Wozniak",
+      "room": "312",
+      "age": 84,
+      "sex": "F",
+      "admission_date": "2024-03-19",
+      "dob": "1941-06-27",
+      "primary_concern": "Possible relapse of major depression — 10 days of social withdrawal and flat affect. Osteoporosis raises fracture risk if mobility drops.",
+      "risk_flags": [
+        "Depression relapse",
+        "Social withdrawal",
+        "Fracture risk"
+      ],
+      "care_team": {
+        "attending": "Dr. Anita Rao, MD — Geriatrics",
+        "primary_nurse": "RN Grace Kim",
+        "specialists": [
+          "Dr. Omar Haddad — Psychiatry"
+        ]
+      },
+      "medical_history": [
+        {
+          "year": 2013,
+          "event": "Major depressive disorder, recurrent"
+        },
+        {
+          "year": 2019,
+          "event": "Osteoporosis after vertebral compression fracture"
+        },
+        {
+          "year": 2007,
+          "event": "Hysterectomy"
+        }
+      ],
+      "labs": [
+        {
+          "date": "2026-05-20",
+          "panel": "Depression workup",
+          "results": [
+            {
+              "name": "TSH",
+              "value": "4.8",
+              "unit": "mIU/L",
+              "flag": "high"
+            },
+            {
+              "name": "Vitamin D",
+              "value": "19",
+              "unit": "ng/mL",
+              "flag": "low"
+            },
+            {
+              "name": "Vitamin B12",
+              "value": "305",
+              "unit": "pg/mL",
+              "flag": "normal"
+            }
+          ]
+        },
+        {
+          "date": "2025-11-30",
+          "panel": "Bone health",
+          "results": [
+            {
+              "name": "Calcium",
+              "value": "9.1",
+              "unit": "mg/dL",
+              "flag": "normal"
+            },
+            {
+              "name": "DEXA T-score (spine)",
+              "value": "-2.8",
+              "unit": "",
+              "flag": "low"
+            }
+          ]
+        }
+      ],
+      "specialist_comms": [
+        {
+          "date": "2026-05-18",
+          "from": "Dr. Omar Haddad — Psychiatry",
+          "text": "Telehealth check-in. PHQ-9 = 16 (moderately severe), up from 9. Increase sertraline to 100 mg daily, re-evaluate in 2 weeks; rule out hypothyroidism given borderline TSH."
+        }
+      ],
+      "admission_note": {
+        "date": "2024-03-19",
+        "author": "Dr. Anita Rao, MD — Geriatrics",
+        "text": "Admitted for increasing isolation and inability to manage at home after spouse's death. History of recurrent depression. Euthymic and engaged on interview. Plan: continue sertraline, psychiatry follow-up, fall and fracture precautions for osteoporosis."
+      },
+      "doctor_notes": [
+        {
+          "date": "2026-02-22",
+          "author": "Dr. Anita Rao, MD — Geriatrics",
+          "text": "Mood stable, participating in activities. Tolerating sertraline well. Continue current dose; encourage continued social engagement."
+        }
+      ],
+      "diagnoses": [
+        "Major depressive disorder (history)",
+        "Osteoporosis"
+      ],
+      "medications": [
+        {
+          "name": "Sertraline",
+          "dose": "50 mg daily"
+        },
+        {
+          "name": "Calcium + Vit D",
+          "dose": "daily"
+        }
+      ],
+      "status": "attention",
+      "trends": {
+        "eating": "stable",
+        "social": "declining",
+        "activity": "declining"
+      },
+      "summary": "Withdrawn from group activities for 10 days; flat affect noted by two staff.",
+      "vitals": [
+        {
+          "date": "2026-05-04",
+          "weight": 121,
+          "bp": "134/82",
+          "hr": 70
+        },
+        {
+          "date": "2026-05-11",
+          "weight": 121,
+          "bp": "132/80",
+          "hr": 71
+        },
+        {
+          "date": "2026-05-18",
+          "weight": 120,
+          "bp": "136/84",
+          "hr": 72
+        },
+        {
+          "date": "2026-05-25",
+          "weight": 120,
+          "bp": "138/86",
+          "hr": 73
+        }
+      ],
+      "adl": [
+        {
+          "date": "2026-05-04",
+          "eating": 4,
+          "mobility": 4,
+          "bathing": 4,
+          "dressing": 4,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-11",
+          "eating": 4,
+          "mobility": 4,
+          "bathing": 3,
+          "dressing": 4,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-18",
+          "eating": 4,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 3,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-25",
+          "eating": 3,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 3,
+          "toileting": 4
+        }
+      ],
+      "notes": [
+        {
+          "date": "2026-05-26 16:00",
+          "author": "Activities — Dana",
+          "text": "Declined bingo and the garden walk again. Stayed in room with curtains drawn."
+        },
+        {
+          "date": "2026-05-23 11:20",
+          "author": "RN Doyle",
+          "text": "Affect flat, minimal eye contact. Denies pain. Sleeping more during the day."
+        },
+        {
+          "date": "2026-05-19 13:45",
+          "author": "CNA Brooks",
+          "text": "Used to lead the craft table; hasn't attended in over a week."
+        }
+      ],
+      "analysis": {
+        "confidence": "moderate",
+        "conclusion": "Helen's social withdrawal, increased daytime sleeping, and flat affect over the past 10 days suggest a possible recurrence of her depression despite sertraline. Physical ADLs remain relatively preserved, which supports a mood-driven rather than medical cause. Recommend a clinician mood assessment and review of antidepressant efficacy.",
+        "areas": [
+          "behavioral",
+          "treatment"
+        ],
+        "research": [
+          {
+            "source": "PubMed",
+            "title": "Recognizing relapse in late-life depression on SSRIs",
+            "ref": "PMID 37551203"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p-207",
+      "name": "Dorothy Lane",
+      "room": "207",
+      "age": 79,
+      "sex": "F",
+      "admission_date": "2025-11-08",
+      "dob": "1946-09-14",
+      "primary_concern": "Recovering from ischemic stroke with steady functional gains in PT. On anticoagulation for atrial fibrillation — monitor for bleeding.",
+      "risk_flags": [
+        "Bleeding (anticoagulation)",
+        "Fall risk during recovery"
+      ],
+      "care_team": {
+        "attending": "Dr. Marcus Hill, MD — Internal Medicine",
+        "primary_nurse": "RN David Osei",
+        "specialists": [
+          "Dr. Sofia Vargas — Cardiology",
+          "Dr. Lillian Cho — Neurology",
+          "PT Jordan Blake — Rehabilitation"
+        ]
+      },
+      "medical_history": [
+        {
+          "year": 2025,
+          "event": "Ischemic stroke (left MCA), mild residual right-arm weakness"
+        },
+        {
+          "year": 2020,
+          "event": "Atrial fibrillation diagnosed"
+        },
+        {
+          "year": 2018,
+          "event": "Hyperlipidemia"
+        },
+        {
+          "year": 2002,
+          "event": "Left hip replacement"
+        }
+      ],
+      "labs": [
+        {
+          "date": "2026-05-23",
+          "panel": "Anticoagulation / lipids",
+          "results": [
+            {
+              "name": "Hemoglobin",
+              "value": "13.0",
+              "unit": "g/dL",
+              "flag": "normal"
+            },
+            {
+              "name": "Platelets",
+              "value": "240",
+              "unit": "K/uL",
+              "flag": "normal"
+            },
+            {
+              "name": "LDL",
+              "value": "78",
+              "unit": "mg/dL",
+              "flag": "normal"
+            }
+          ]
+        },
+        {
+          "date": "2026-01-15",
+          "panel": "Lipid panel",
+          "results": [
+            {
+              "name": "Total cholesterol",
+              "value": "165",
+              "unit": "mg/dL",
+              "flag": "normal"
+            },
+            {
+              "name": "HDL",
+              "value": "52",
+              "unit": "mg/dL",
+              "flag": "normal"
+            }
+          ]
+        }
+      ],
+      "specialist_comms": [
+        {
+          "date": "2026-05-16",
+          "from": "PT Jordan Blake — Rehabilitation",
+          "text": "Three weeks into expanded PT. Independent sit-to-stand achieved; gait distance improved from 15 ft to 60 ft with rolling walker. Continue 5x/week."
+        },
+        {
+          "date": "2026-04-05",
+          "from": "Dr. Lillian Cho — Neurology",
+          "text": "Post-stroke follow-up. Good recovery trajectory; continue apixaban and secondary-prevention measures."
+        }
+      ],
+      "admission_note": {
+        "date": "2025-11-08",
+        "author": "Dr. Marcus Hill, MD — Internal Medicine",
+        "text": "Admitted for rehabilitation following ischemic stroke with mild residual right-arm weakness. Alert and motivated. Plan: intensive PT/OT, continue apixaban for atrial fibrillation, monitor for bleeding, secondary stroke prevention."
+      },
+      "doctor_notes": [
+        {
+          "date": "2026-05-02",
+          "author": "Dr. Marcus Hill, MD — Internal Medicine",
+          "text": "Excellent rehabilitation progress. Strength and balance improving steadily. No bleeding signs on apixaban. Continue expanded PT."
+        },
+        {
+          "date": "2026-01-20",
+          "author": "Dr. Marcus Hill, MD — Internal Medicine",
+          "text": "Two months post-admission. Gait improving with rolling walker. Reinforced anticoagulation safety and fall precautions."
+        }
+      ],
+      "diagnoses": [
+        "Ischemic stroke (recovery)",
+        "Atrial fibrillation"
+      ],
+      "medications": [
+        {
+          "name": "Apixaban",
+          "dose": "5 mg BID"
+        },
+        {
+          "name": "Atorvastatin",
+          "dose": "40 mg nightly"
+        }
+      ],
+      "status": "improving",
+      "trends": {
+        "eating": "improving",
+        "social": "improving",
+        "activity": "improving"
+      },
+      "summary": "Steady gains across the board since starting expanded PT three weeks ago.",
+      "vitals": [
+        {
+          "date": "2026-05-04",
+          "weight": 131,
+          "bp": "126/78",
+          "hr": 74
+        },
+        {
+          "date": "2026-05-11",
+          "weight": 132,
+          "bp": "124/76",
+          "hr": 72
+        },
+        {
+          "date": "2026-05-18",
+          "weight": 133,
+          "bp": "122/76",
+          "hr": 71
+        },
+        {
+          "date": "2026-05-25",
+          "weight": 134,
+          "bp": "120/74",
+          "hr": 70
+        }
+      ],
+      "adl": [
+        {
+          "date": "2026-05-04",
+          "eating": 3,
+          "mobility": 2,
+          "bathing": 2,
+          "dressing": 2,
+          "toileting": 3
+        },
+        {
+          "date": "2026-05-11",
+          "eating": 3,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 3,
+          "toileting": 3
+        },
+        {
+          "date": "2026-05-18",
+          "eating": 4,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 3,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-25",
+          "eating": 4,
+          "mobility": 4,
+          "bathing": 4,
+          "dressing": 4,
+          "toileting": 4
+        }
+      ],
+      "notes": [
+        {
+          "date": "2026-05-25 10:30",
+          "author": "PT Nguyen",
+          "text": "Walked the full hallway with a single cane today. Big smile. Asked about joining the choir."
+        },
+        {
+          "date": "2026-05-21 12:15",
+          "author": "CNA Ramirez",
+          "text": "Finished her full lunch and chatted with tablemates. Mood notably up."
+        },
+        {
+          "date": "2026-05-16 09:00",
+          "author": "RN Patel",
+          "text": "Grip strength improving on the affected side. Engaged and motivated in therapy."
+        }
+      ],
+      "analysis": {
+        "confidence": "high",
+        "conclusion": "Dorothy is showing consistent, encouraging recovery across mobility, appetite, and social engagement since her PT was expanded. No red flags. Continue the current plan and consider gradually increasing activity goals.",
+        "areas": [
+          "behavioral"
+        ],
+        "research": []
+      }
+    },
+    {
+      "id": "p-145",
+      "name": "Frank Alvarez",
+      "room": "145",
+      "age": 83,
+      "sex": "M",
+      "admission_date": "2024-07-22",
+      "dob": "1942-12-05",
+      "primary_concern": "COPD with gradual 6-lb monthly weight loss and reduced intake; diabetes complicates nutrition. Monitor for malnutrition and exacerbation.",
+      "risk_flags": [
+        "Weight loss",
+        "Malnutrition risk",
+        "COPD exacerbation"
+      ],
+      "care_team": {
+        "attending": "Dr. Marcus Hill, MD — Internal Medicine",
+        "primary_nurse": "RN Grace Kim",
+        "specialists": [
+          "Dr. Naomi Stern — Pulmonology",
+          "RD Carla Mendez — Dietitian"
+        ]
+      },
+      "medical_history": [
+        {
+          "year": 2014,
+          "event": "COPD (former smoker, 30 pack-years)"
+        },
+        {
+          "year": 2011,
+          "event": "Type 2 diabetes mellitus"
+        },
+        {
+          "year": 2009,
+          "event": "Right inguinal hernia repair"
+        }
+      ],
+      "labs": [
+        {
+          "date": "2026-05-19",
+          "panel": "Diabetes + nutrition",
+          "results": [
+            {
+              "name": "HbA1c",
+              "value": "6.4",
+              "unit": "%",
+              "flag": "normal"
+            },
+            {
+              "name": "Albumin",
+              "value": "3.3",
+              "unit": "g/dL",
+              "flag": "low"
+            },
+            {
+              "name": "Glucose",
+              "value": "108",
+              "unit": "mg/dL",
+              "flag": "normal"
+            }
+          ]
+        },
+        {
+          "date": "2026-03-08",
+          "panel": "CBC",
+          "results": [
+            {
+              "name": "WBC",
+              "value": "7.8",
+              "unit": "K/uL",
+              "flag": "normal"
+            },
+            {
+              "name": "Hemoglobin",
+              "value": "13.4",
+              "unit": "g/dL",
+              "flag": "normal"
+            }
+          ]
+        }
+      ],
+      "specialist_comms": [
+        {
+          "date": "2026-05-12",
+          "from": "RD Carla Mendez — Dietitian",
+          "text": "Nutrition consult for unintentional weight loss. Started oral nutritional supplement twice daily; small frequent meals and weekly weights advised. Patient reports a metallic taste affecting intake."
+        },
+        {
+          "date": "2026-02-20",
+          "from": "Dr. Naomi Stern — Pulmonology",
+          "text": "Stable COPD on tiotropium. Spirometry unchanged. Encourage activity as tolerated and annual vaccinations."
+        }
+      ],
+      "admission_note": {
+        "date": "2024-07-22",
+        "author": "Dr. Marcus Hill, MD — Internal Medicine",
+        "text": "Admitted after a COPD exacerbation and difficulty managing medications independently. Stable on room air at rest. Plan: pulmonology follow-up, continue tiotropium and metformin, monitor weight and glycemic control."
+      },
+      "doctor_notes": [
+        {
+          "date": "2026-04-15",
+          "author": "Dr. Marcus Hill, MD — Internal Medicine",
+          "text": "Gradual weight loss noted over recent weeks. Appetite slightly reduced; remains socially active. Dietitian referral placed. Continue current regimen."
+        },
+        {
+          "date": "2025-08-10",
+          "author": "Dr. Marcus Hill, MD — Internal Medicine",
+          "text": "COPD stable, no exacerbations. Blood sugars well controlled on metformin. Encouraged activity as tolerated."
+        }
+      ],
+      "diagnoses": [
+        "COPD",
+        "Type 2 diabetes"
+      ],
+      "medications": [
+        {
+          "name": "Tiotropium",
+          "dose": "inhaled daily"
+        },
+        {
+          "name": "Metformin",
+          "dose": "500 mg BID"
+        }
+      ],
+      "status": "watch",
+      "trends": {
+        "eating": "declining",
+        "social": "stable",
+        "activity": "stable"
+      },
+      "summary": "Gradual weight loss over a month; intake slightly down but still social.",
+      "vitals": [
+        {
+          "date": "2026-05-04",
+          "weight": 168,
+          "bp": "130/80",
+          "hr": 78
+        },
+        {
+          "date": "2026-05-11",
+          "weight": 166,
+          "bp": "132/82",
+          "hr": 79
+        },
+        {
+          "date": "2026-05-18",
+          "weight": 164,
+          "bp": "128/78",
+          "hr": 80
+        },
+        {
+          "date": "2026-05-25",
+          "weight": 162,
+          "bp": "130/80",
+          "hr": 81
+        }
+      ],
+      "adl": [
+        {
+          "date": "2026-05-04",
+          "eating": 4,
+          "mobility": 4,
+          "bathing": 4,
+          "dressing": 4,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-11",
+          "eating": 4,
+          "mobility": 4,
+          "bathing": 4,
+          "dressing": 4,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-18",
+          "eating": 3,
+          "mobility": 4,
+          "bathing": 4,
+          "dressing": 4,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-25",
+          "eating": 3,
+          "mobility": 4,
+          "bathing": 3,
+          "dressing": 4,
+          "toileting": 4
+        }
+      ],
+      "notes": [
+        {
+          "date": "2026-05-24 13:00",
+          "author": "RN Doyle",
+          "text": "Down 6 lb this month. Still joins meals and card games but eating smaller portions."
+        },
+        {
+          "date": "2026-05-18 08:40",
+          "author": "CNA Brooks",
+          "text": "Reports food 'tastes off' lately. Good spirits otherwise."
+        }
+      ],
+      "analysis": {
+        "confidence": "low",
+        "conclusion": "Frank's gradual weight loss with mildly reduced intake, in the setting of COPD and diabetes, is worth watching. Taste changes and appetite shifts can have many causes (medication, glycemic control, mood). Social engagement remains intact. Recommend monitoring intake and a routine review of glucose trends; not urgent.",
+        "areas": [
+          "behavioral",
+          "drug_safety"
+        ],
+        "research": [
+          {
+            "source": "OpenFDA",
+            "title": "Metformin — gastrointestinal and taste-related adverse events",
+            "ref": "FAERS"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p-220",
+      "name": "Eleanor Pruitt",
+      "room": "220",
+      "age": 88,
+      "sex": "F",
+      "admission_date": "2023-02-11",
+      "dob": "1938-04-18",
+      "primary_concern": "Stable osteoarthritis managed with acetaminophen; focus is comfort and mobility maintenance. No acute concerns.",
+      "risk_flags": [
+        "Joint pain",
+        "Age-related mobility decline"
+      ],
+      "care_team": {
+        "attending": "Dr. Anita Rao, MD — Geriatrics",
+        "primary_nurse": "RN Priya Patel",
+        "specialists": []
+      },
+      "medical_history": [
+        {
+          "year": 2010,
+          "event": "Osteoarthritis, bilateral knees and hands"
+        },
+        {
+          "year": 2016,
+          "event": "Cataract surgery, both eyes"
+        },
+        {
+          "year": 1995,
+          "event": "Hysterectomy"
+        }
+      ],
+      "labs": [
+        {
+          "date": "2026-04-30",
+          "panel": "Annual basic panel",
+          "results": [
+            {
+              "name": "Creatinine",
+              "value": "0.9",
+              "unit": "mg/dL",
+              "flag": "normal"
+            },
+            {
+              "name": "Hemoglobin",
+              "value": "12.8",
+              "unit": "g/dL",
+              "flag": "normal"
+            },
+            {
+              "name": "Glucose",
+              "value": "94",
+              "unit": "mg/dL",
+              "flag": "normal"
+            }
+          ]
+        }
+      ],
+      "specialist_comms": [
+        {
+          "date": "2026-04-30",
+          "from": "Dr. Anita Rao — Geriatrics",
+          "text": "Annual wellness exam. Doing well. Continue acetaminophen as needed for joint pain; gentle range-of-motion activities encouraged."
+        }
+      ],
+      "admission_note": {
+        "date": "2023-02-11",
+        "author": "Dr. Anita Rao, MD — Geriatrics",
+        "text": "Admitted for assistance with daily activities due to advancing osteoarthritis and limited home support. Pleasant, fully oriented. Plan: acetaminophen for pain, gentle mobility program, routine monitoring."
+      },
+      "doctor_notes": [
+        {
+          "date": "2026-04-30",
+          "author": "Dr. Anita Rao, MD — Geriatrics",
+          "text": "Annual review. Comfortable and stable. Joint pain well managed with acetaminophen. No new concerns."
+        }
+      ],
+      "diagnoses": [
+        "Osteoarthritis"
+      ],
+      "medications": [
+        {
+          "name": "Acetaminophen",
+          "dose": "650 mg TID PRN"
+        }
+      ],
+      "status": "stable",
+      "trends": {
+        "eating": "stable",
+        "social": "stable",
+        "activity": "stable"
+      },
+      "summary": "Comfortable and consistent. No changes of note.",
+      "vitals": [
+        {
+          "date": "2026-05-04",
+          "weight": 139,
+          "bp": "128/76",
+          "hr": 70
+        },
+        {
+          "date": "2026-05-11",
+          "weight": 139,
+          "bp": "126/74",
+          "hr": 71
+        },
+        {
+          "date": "2026-05-18",
+          "weight": 140,
+          "bp": "128/78",
+          "hr": 70
+        },
+        {
+          "date": "2026-05-25",
+          "weight": 139,
+          "bp": "127/76",
+          "hr": 70
+        }
+      ],
+      "adl": [
+        {
+          "date": "2026-05-04",
+          "eating": 4,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 4,
+          "toileting": 4
+        },
+        {
+          "date": "2026-05-25",
+          "eating": 4,
+          "mobility": 3,
+          "bathing": 3,
+          "dressing": 4,
+          "toileting": 4
+        }
+      ],
+      "notes": [
+        {
+          "date": "2026-05-23 15:30",
+          "author": "CNA Ramirez",
+          "text": "Knitting in the lounge, chatty and content. Mild knee stiffness in the morning as usual."
+        }
+      ],
+      "analysis": {
+        "confidence": "high",
+        "conclusion": "Eleanor is stable with well-managed osteoarthritis and no concerning trends. Continue routine care.",
+        "areas": [
+          "behavioral"
+        ],
+        "research": []
+      }
+    },
+    {
+      "id": "p-130",
+      "name": "James Okafor",
+      "room": "130",
+      "age": 75,
+      "sex": "M",
+      "admission_date": "2025-06-30",
+      "dob": "1950-10-09",
+      "primary_concern": "Well-controlled hypertension; recently more socially engaged. No acute concerns — maintain routine BP monitoring.",
+      "risk_flags": [
+        "Blood pressure monitoring"
+      ],
+      "care_team": {
+        "attending": "Dr. Marcus Hill, MD — Internal Medicine",
+        "primary_nurse": "RN David Osei",
+        "specialists": []
+      },
+      "medical_history": [
+        {
+          "year": 2017,
+          "event": "Essential hypertension"
+        },
+        {
+          "year": 2013,
+          "event": "Appendectomy"
+        },
+        {
+          "year": 2008,
+          "event": "Mild concussion from a fall, full recovery"
+        }
+      ],
+      "labs": [
+        {
+          "date": "2026-05-10",
+          "panel": "Basic metabolic panel",
+          "results": [
+            {
+              "name": "Sodium",
+              "value": "140",
+              "unit": "mmol/L",
+              "flag": "normal"
+            },
+            {
+              "name": "Potassium",
+              "value": "4.2",
+              "unit": "mmol/L",
+              "flag": "normal"
+            },
+            {
+              "name": "Creatinine",
+              "value": "1.0",
+              "unit": "mg/dL",
+              "flag": "normal"
+            }
+          ]
+        }
+      ],
+      "specialist_comms": [
+        {
+          "date": "2026-05-10",
+          "from": "Dr. Marcus Hill — Internal Medicine",
+          "text": "Routine follow-up. BP averaging 128/78 on amlodipine. Continue current regimen; recheck in 3 months."
+        }
+      ],
+      "admission_note": {
+        "date": "2025-06-30",
+        "author": "Dr. Marcus Hill, MD — Internal Medicine",
+        "text": "Admitted for supportive living after a brief hospitalization for hypertensive urgency. Well-appearing, blood pressure controlled on arrival. Plan: continue amlodipine, routine BP monitoring, encourage social and physical activity."
+      },
+      "doctor_notes": [
+        {
+          "date": "2026-05-10",
+          "author": "Dr. Marcus Hill, MD — Internal Medicine",
+          "text": "Doing well. BP at goal on amlodipine. Increasingly engaged in community activities. Continue current regimen."
+        }
+      ],
+      "diagnoses": [
+        "Hypertension"
+      ],
+      "medications": [
+        {
+          "name": "Amlodipine",
+          "dose": "5 mg daily"
+        }
+      ],
+      "status": "stable",
+      "trends": {
+        "eating": "stable",
+        "social": "improving",
+        "activity": "stable"
+      },
+      "summary": "Doing well; recently more involved in community events.",
+      "vitals": [
+        {
+          "date": "2026-05-04",
+          "weight": 185,
+          "bp": "134/84",
+          "hr": 72
+        },
+        {
+          "date": "2026-05-25",
+          "weight": 184,
+          "bp": "130/82",
+          "hr": 71
+        }
+      ],
+      "adl": [
+        {
+          "date": "2026-05-04",
+          "eating": 5,
+          "mobility": 5,
+          "bathing": 5,
+          "dressing": 5,
+          "toileting": 5
+        },
+        {
+          "date": "2026-05-25",
+          "eating": 5,
+          "mobility": 5,
+          "bathing": 5,
+          "dressing": 5,
+          "toileting": 5
+        }
+      ],
+      "notes": [
+        {
+          "date": "2026-05-22 17:10",
+          "author": "Activities — Dana",
+          "text": "Volunteered to host the Friday film club. Great energy and very independent."
+        }
+      ],
+      "analysis": {
+        "confidence": "high",
+        "conclusion": "James is independent and thriving, with blood pressure well controlled. No action needed.",
+        "areas": [
+          "behavioral"
+        ],
+        "research": []
+      }
+    }
+  ]
+}
