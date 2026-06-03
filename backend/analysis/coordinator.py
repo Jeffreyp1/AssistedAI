@@ -23,7 +23,7 @@ from tools import fda_client, pubmed_client, trials_client
 load_dotenv()
 
 MAX_ITERATIONS = 10
-MODEL = "claude-opus-4-8"
+MODEL = "claude-haiku-4-5"
 
 AREA_BY_TOOL = {
     "search_pubmed": "treatment",
@@ -44,11 +44,25 @@ this resident:
 - Search trials only if the resident might plausibly be a candidate.
 Do not call tools that aren't relevant. Quality over quantity.
 
-When you have enough evidence, write a final conclusion that:
-- States the most likely explanation as a possibility, never a definitive diagnosis.
-- Notes positive counter-signals (e.g. improving social engagement) when present.
-- Ends with one concrete, conservative next step for staff.
-Keep it to a short paragraph in warm, plain language.
+When you have enough evidence, write the final answer for a non-clinical caregiver.
+Output ONLY this answer: no preamble, and no commentary about your searches or reasoning.
+Use exactly this structure, with a blank line between each part:
+
+**Summary**
+
+A 2-3 sentence plain-language paragraph: the most likely explanation as a possibility
+(never a definitive diagnosis), plus any positive counter-signals (e.g. improving social
+engagement).
+
+**What to watch**
+
+- 2 to 4 short bullets naming the key signals and any contributing factors.
+
+**Next step:** one concrete, conservative action for staff.
+
+Formatting rules: keep the section labels (**Summary**, **What to watch**, **Next step:**)
+exactly as shown. Use **bold** for key terms and "- " for bullets. Do not use markdown
+headings (#), horizontal rules (---), tables, or italics. Keep it warm and plain.
 """
 
 TOOLS: list[anthropic.types.ToolParam] = [
@@ -116,15 +130,43 @@ TOOLS: list[anthropic.types.ToolParam] = [
 
 def build_patient_text(p: dict) -> str:
     """Render a resident record into the free-text prompt the model reasons over."""
-    lines = [f"Resident: {p['name']}, age {p.get('age', '?')}, room {p.get('room', '?')}."]
+    dob = f", DOB {p['dob']}" if p.get("dob") else ""
+    lines = [f"Resident: {p['name']}, age {p.get('age', '?')}{dob}, room {p.get('room', '?')}."]
+    if p.get("primary_concern"):
+        lines.append("Main concern: " + p["primary_concern"])
+    if p.get("risk_flags"):
+        lines.append("Risk flags: " + ", ".join(p["risk_flags"]) + ".")
     if p.get("diagnoses"):
         lines.append("Diagnoses: " + ", ".join(p["diagnoses"]) + ".")
+    if p.get("medical_history"):
+        hist = ", ".join(f"{h['event']} ({h['year']})" for h in p["medical_history"])
+        lines.append("Past medical history: " + hist + ".")
     if p.get("medications"):
         meds = ", ".join(f"{m['name']} ({m['dose']})" for m in p["medications"])
         lines.append("Current medications: " + meds + ".")
     if p.get("trends"):
         trends = ", ".join(f"{k}: {v}" for k, v in p["trends"].items())
         lines.append("Behavioral trends (last month): " + trends + ".")
+    if p.get("labs"):
+        lines.append("Recent labs:")
+        for panel in p["labs"]:
+            results = ", ".join(
+                f"{r['name']} {r['value']}{(' ' + r['unit']) if r.get('unit') else ''}"
+                f"{' [' + r['flag'] + ']' if r.get('flag') and r['flag'] != 'normal' else ''}"
+                for r in panel.get("results", [])
+            )
+            lines.append(f"- [{panel['date']}] {panel['panel']}: {results}")
+    if p.get("specialist_comms"):
+        lines.append("Communications from outside providers:")
+        for c in p["specialist_comms"]:
+            lines.append(f"- [{c['date']}] {c['from']}: {c['text']}")
+    if p.get("admission_note"):
+        a = p["admission_note"]
+        lines.append(f"Admission note [{a['date']}] {a['author']}: {a['text']}")
+    if p.get("doctor_notes"):
+        lines.append("Previous physician notes:")
+        for n in p["doctor_notes"][:4]:
+            lines.append(f"- [{n['date']}] {n['author']}: {n['text']}")
     if p.get("notes"):
         lines.append("Recent caregiver notes:")
         for n in p["notes"][:6]:
