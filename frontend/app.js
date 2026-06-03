@@ -135,6 +135,9 @@
   /* ---------- attention list ---------- */
   function renderList() {
     var v = el('<section class="view"></section>');
+    var back = el('<button class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back to overview</button>');
+    back.addEventListener("click", function () { go("overview", { filter: "all" }); });
+    v.appendChild(back);
     v.appendChild(el(
       '<div class="page-head"><div class="eyebrow">Residents</div><h1>Who needs you</h1>' +
       '<p class="sub">Search by name or room, or filter by how each resident is trending.</p></div>'
@@ -201,11 +204,18 @@
     v.appendChild(el(
       '<div class="profile-head"><div class="big-avatar">' + initials(p.name) + "</div>" +
       '<div class="ph-main"><h1>' + esc(p.name) + "</h1>" +
-      '<div class="ph-meta">Room ' + esc(p.room) + " · " + p.age + " · " + (p.sex === "F" ? "Female" : "Male") +
-      " · Admitted " + esc(p.admission_date) + "</div>" +
+      '<div class="ph-meta">' +
+      '<span class="kv"><b>Age:</b> ' + p.age + "</span>" +
+      '<span class="kv"><b>Gender:</b> ' + (p.sex === "F" ? "Female" : p.sex === "M" ? "Male" : "Other") + "</span>" +
+      '<span class="kv"><b>Date of birth:</b> ' + esc(p.dob) + "</span>" +
+      '<span class="kv"><b>Room:</b> ' + esc(p.room) + "</span>" +
+      '<span class="kv"><b>Admitted:</b> ' + esc(p.admission_date) + "</span>" +
+      "</div>" +
       '<div class="dx-chips">' + p.diagnoses.map(function (d) { return '<span class="dx">' + esc(d) + "</span>"; }).join("") + "</div></div>" +
       "<div>" + badge(p.status) + "</div></div>"
     ));
+
+    v.appendChild(concernCard(p));
 
     var tc = el('<div class="trend-cards"></div>');
     Object.keys(TREND_LABEL).forEach(function (k) {
@@ -228,7 +238,84 @@
     grid2.appendChild(notesCard(p));
     grid2.appendChild(medsCard(p));
     v.appendChild(grid2);
+
+    v.appendChild(doctorNotesCard(p));
+
+    var grid3 = el('<div class="grid-2"></div>');
+    grid3.appendChild(historyCard(p));
+    grid3.appendChild(careTeamCard(p));
+    v.appendChild(grid3);
+
+    v.appendChild(labsCard(p));
+    v.appendChild(commsCard(p));
     return v;
+  }
+
+  function doctorNotesCard(p) {
+    var items = [];
+    if (p.admission_note) {
+      var a = p.admission_note;
+      items.push('<div class="note"><div class="n-top"><span class="n-who">' + esc(a.author) +
+        ' <span class="note-tag">Admission</span></span><span class="n-time">' + esc(a.date) + "</span></div>" +
+        '<div class="n-text">' + esc(a.text) + "</div></div>");
+    }
+    (p.doctor_notes || []).slice().sort(function (x, y) { return x.date < y.date ? 1 : -1; }).forEach(function (n) {
+      items.push('<div class="note"><div class="n-top"><span class="n-who">' + esc(n.author) +
+        '</span><span class="n-time">' + esc(n.date) + "</span></div>" +
+        '<div class="n-text">' + esc(n.text) + "</div></div>");
+    });
+    var body = items.length ? items.join("") : '<span class="ai-disclaimer">No physician notes on file</span>';
+    return el('<div class="card"><h3>Physician &amp; admission notes</h3><div class="card-in"><div class="timeline">' + body + "</div></div></div>");
+  }
+
+  function concernCard(p) {
+    var risks = (p.risk_flags || []).map(function (r) { return '<span class="risk">' + esc(r) + "</span>"; }).join("");
+    return el(
+      '<div class="concern"><div class="concern-label">Main concern</div>' +
+      '<p class="concern-text">' + esc(p.primary_concern || "—") + "</p>" +
+      (risks ? '<div class="risks">' + risks + "</div>" : "") + "</div>"
+    );
+  }
+
+  function careTeamCard(p) {
+    var ct = p.care_team || {};
+    var specs = (ct.specialists || []).map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("");
+    var rows =
+      '<div class="ct-row"><span class="ct-role">Attending</span><span class="ct-name">' + esc(ct.attending || "—") + "</span></div>" +
+      '<div class="ct-row"><span class="ct-role">Primary nurse</span><span class="ct-name">' + esc(ct.primary_nurse || "—") + "</span></div>" +
+      (specs ? '<div class="ct-row"><span class="ct-role">Specialists</span><ul class="ct-specs">' + specs + "</ul></div>" : "");
+    return el('<div class="card"><h3>Care team</h3><div class="card-in"><div class="care-team">' + rows + "</div></div></div>");
+  }
+
+  function historyCard(p) {
+    var items = (p.medical_history || []).slice().sort(function (a, b) { return b.year - a.year; }).map(function (h) {
+      return '<div class="hist"><span class="hist-year num">' + esc(h.year) + '</span><span class="hist-event">' + esc(h.event) + "</span></div>";
+    }).join("");
+    return el('<div class="card"><h3>Medical history</h3><div class="card-in"><div class="history">' + (items || '<span class="ai-disclaimer">None on file</span>') + "</div></div></div>");
+  }
+
+  function labsCard(p) {
+    var panels = (p.labs || []).map(function (panel) {
+      var rows = panel.results.map(function (r) {
+        var unit = r.unit ? ' <span class="lab-unit">' + esc(r.unit) + "</span>" : "";
+        return '<div class="lab-row ' + esc(r.flag || "normal") + '">' +
+          '<span class="lab-name">' + esc(r.name) + "</span>" +
+          '<span class="lab-val num">' + esc(r.value) + unit + "</span>" +
+          '<span class="lab-flag">' + esc(r.flag || "normal") + "</span></div>";
+      }).join("");
+      return '<div class="lab-panel"><div class="lab-head"><span class="lab-panel-name">' + esc(panel.panel) +
+        '</span><span class="lab-date">' + esc(panel.date) + "</span></div>" + rows + "</div>";
+    }).join("");
+    return el('<div class="card"><h3>Lab results</h3><div class="card-in"><div class="labs">' + (panels || '<span class="ai-disclaimer">No labs on file</span>') + "</div></div></div>");
+  }
+
+  function commsCard(p) {
+    var items = (p.specialist_comms || []).map(function (c) {
+      return '<div class="comm"><div class="comm-top"><span class="comm-from">' + esc(c.from) +
+        '</span><span class="comm-date">' + esc(c.date) + "</span></div>" +
+        '<div class="comm-text">' + esc(c.text) + "</div></div>";
+    }).join("");
+    return el('<div class="card"><h3>Specialist communications</h3><div class="card-in"><div class="comms">' + (items || '<span class="ai-disclaimer">No outside communications on file</span>') + "</div></div></div>");
   }
 
   function adlCard(p) {
@@ -314,7 +401,37 @@
       : '<p class="ai-disclaimer">AI-generated decision support. Not a diagnosis — confirm with a clinician before acting.</p>';
     body.innerHTML =
       '<div class="ai-meta"><span class="conf ' + (a.confidence || "moderate") + '">Confidence: ' + (a.confidence || "moderate") + "</span>" + areas + "</div>" +
-      '<p class="ai-conclusion">' + esc(a.conclusion) + "</p>" + research + simNote;
+      renderConclusion(a.conclusion) + research + simNote;
+  }
+
+  // Lightweight Markdown for the conclusion: blank-line paragraphs, "- " bullets,
+  // **bold** / *italic* inline, and a bold-only line as a small subheading.
+  function mdInline(escaped) {
+    return escaped
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/(^|[^*])\*(?!\s)([^*]+?)\*/g, "$1<em>$2</em>");
+  }
+
+  function renderConclusion(text) {
+    var clean = String(text == null ? "" : text).replace(/\r/g, "");
+    var kept = clean.split("\n").filter(function (ln) { return !/^\s*([-*_])\1{2,}\s*$/.test(ln); });
+    var blocks = kept.join("\n").split(/\n{2,}/);
+    var html = "";
+    blocks.forEach(function (block) {
+      var bl = block.trim();
+      if (!bl) return;
+      var lines = bl.split("\n");
+      if (lines.every(function (ln) { return /^\s*[-*]\s+/.test(ln); })) {
+        html += '<ul class="ai-list">' + lines.map(function (ln) {
+          return "<li>" + mdInline(esc(ln.replace(/^\s*[-*]\s+/, ""))) + "</li>";
+        }).join("") + "</ul>";
+        return;
+      }
+      var head = lines.length === 1 && bl.match(/^\*\*(.+?)\*\*:?$/);
+      if (head) { html += '<h4 class="ai-subhead">' + esc(head[1]) + "</h4>"; return; }
+      html += '<p class="ai-conclusion">' + mdInline(esc(bl)).replace(/\n/g, "<br>") + "</p>";
+    });
+    return html || '<p class="ai-conclusion">' + esc(text) + "</p>";
   }
 
   /* ---------- router ---------- */
@@ -347,7 +464,17 @@
   }
 
   /* ---------- boot ---------- */
+  function setupChrome() {
+    var home = document.querySelector(".wordmark");
+    if (!home) return;
+    home.addEventListener("click", function () { go("overview", { filter: "all" }); });
+    home.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go("overview", { filter: "all" }); }
+    });
+  }
+
   function boot() {
+    setupChrome();
     Promise.all([fetchJSON("/api/summary"), fetchJSON("/api/patients")])
       .then(function (res) {
         SUMMARY = res[0];
